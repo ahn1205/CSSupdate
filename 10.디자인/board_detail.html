@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 문제 -->
+    <!-- http://118.130.22.189:8181/CSS/board2_detail.html -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>폼을 만들어 보자</title>
+    
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!--개인 디자인 추가-->
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/bootstrap.js"></script>
+       <style>
+           .detail-info .title {font-size: 24px;} 
+           .detail > .info > .price { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; font-size: 30px; padding: 10px 0; }
+           .detail-info .delivery {color:#888}
+
+           .detail-control .order .detail-control .price{overflow: hidden;}
+           .detail-control .price > .left {float:left; line-height: 45px;}
+           .detail-control .price > .right {float: right; font-size: 24px;}
+
+           .detail-control .order button{float:left; width:50%;}/*border boxing이 들어가있다 ?그래서 안된다 ?!*/
+       </style>
+                 
+    </head>
+
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                   <h2>상세보기<small>(쿠팡 예제)</small></h2>
+                   <hr>
+                </div>
+                
+                <div class="col-md-6 col-xs-12">
+                    <img src="img/detail.jpg">
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="info">
+                        <p class="title">[게릴라특가] 30일체험가능! 벨라페이스 3컬러 LED마스크 눈마사지 겸용/4단계 시간조절/피부홈케어 +사은품까지!</p>
+                        <p class="price"><strong>135,000원</strong></p>
+                        <p class="delivery">무료배송
+                        <br>
+                         	상품별배송 ㅣ 택배배송 ㅣ당일출고, 12시 이전 결제 건까지 해당 (주말, 공휴일 제외)
+                        </p>
+                    </div>
+                    
+                    <div class="control">
+                        <div class="price">
+                            <p class="left">총 상품금액</p>
+                            <p class="right"><strong>0원</strong></p>
+                        </div>
+                        <div class="order">
+                            <button type="button" class="left btn btn-default">장바구니</button>
+                            <button type="button" class="right btn btn-primary">구매하기</button>
+                        </div>                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <section style="margin-top: 80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form class="reply-wrap">
+                        <div class="reply-image">
+                            <img src="img/profile.png"> 
+                        </div>
+                        <!--form-control은 부트스트랩의 클래스입니다-->
+                        <div class="reply-content">
+                            <textarea class="form-control" rows="3"></textarea>
+                            <!--여기에-->
+                            <div class="reply-group">
+                                  <div class="reply-input">
+                                  <input type="text" class="form-control" placeholder="이름">
+                                  <input type="password" class="form-control" placeholder="비밀번호">
+                                  </div>
+                                  <button class="right btn btn-info">등록하기</button>
+                            </div>
+
+                        </div>
+                    </form>
+                    
+                    <!--여기서부터 반복-->
+                    <div class="reply-wrap">
+                        <div class="reply-image">
+                            <img src="img/profile.png">
+                        </div>
+                        <div class="reply-content">
+                            <div class="reply-group">
+                                <strong class="left">honggildong</strong> 
+                                <small class="left">2019/12/10</small>
+                                <a href="#" class="right"><span class="glyphicon glyphicon-pencil"></span>수정</a>
+                                <a href="#" class="right"><span class="glyphicon glyphicon-remove"></span>삭제</a>
+                            </div>
+                            <p class="clearfix">여기는 댓글영역</p>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+            
+        </div>
+        
+    </section>
+</body>
+</html>
