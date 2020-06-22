@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩디자인 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <!-- 제이쿼리 추가 (순서 중요)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    <!-- 가장 아래쪽에 디자인을 추가 -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @media(max-width: 767px){
+            .adside-menu{
+                display: none;
+            }
+        }
+        /*http://118.130.22.189:8181/CSS/facebook.html*/
+        .adside-inner{ text-decoration: none; color:#333333;}
+
+        .section-inner .reply-content textarea {height: 50px; transition: height 0.5 ease-in-out;}
+        .section-inner .reply-content textarea:focus {height:100px;}
+        .section-inner .reply-group{overflow: hidden; margin-top: 10px;}
+        .section-inner .reply-group .left{float:left;}
+        .section-inner .reply-group .right{float:right;}
+        
+        .title-innner p {padding:20px 0;}
+        .title-innner p {margin: 0;}
+        .title-innner {position: relative;} /*부모*/
+        .title-innner .profile {position: absolute; top:50px; left:0px;} /*자식*/
+        .title-inner .title {padding-left: 50px;}
+
+        .content-inner {padding: 10px 0;}
+
+        .like-inner {padding:10px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 10px;}
+
+        .like-inner {overflow: hidden; padding:10px 0; border-bottom: 1px solid #ddd;}
+        .like-inner a {float:left; width: 33.33%; text-align: center; text-decoration: none; color: #33333333}
+        .link-inner span {margin: 0px;}
+    </style>
+</head>
+<body>
+      <header>
+        <nav class="navbar ">
+            <div class="container-fluid">
+              <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- 로고를 넣는 영역 -->
+                <a class="navbar-brand" href="#"><img src="img/logo.svg" width="20"></a>
+                
+              </div>
+              <!-- nav 바 안에포함되는 컨텐츠 -->
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <!-- 좌측 메뉴 -->
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+               
+                <ul class="nav navbar-nav navbar-right">
+                  <!-- 우측 드랍다운 -->
+                  <li class="dropdown">
+                    <a class=" dropdown-toggle"  data-toggle="dropdown">정보관리 </a>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="#"><span class="glyphicon glyphicon-home"></span> Normal</a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-road"></span> Disabled</a></li>
+                      <li><a href="#">Active</a></li>
+                      <li><a href="#">Normal</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+     <section>
+        <div class="container">
+            <div class="row">
+               
+               <aside class="col-sm-3 aside-menu">
+                   <div class="aside-inner">
+                       <div class="menu1"> 
+                           <p><img src="img/profile.png">
+                               안상욱
+                           </p>  
+                           <ul>
+                               <li>뉴스피드</li>
+                               <li>메신저</li>
+                               <li>watch동영상</li>
+                           </ul>
+   
+                       </div>
+                       <div class="menu2">
+                           <p>둘러보기</p>
+                           <ul>
+                               <li>기부켐페인</li>
+                               <li>페이지</li>
+                               <li>그룹</li>
+                               <li>이벤트</li>
+                               <li>친구리스트</li>
+                           </ul>
+   
+                       </div>
+                   </div>
+
+               </aside>
+
+               <div class="col-xs-12 col-sm-7 section inner">
+                <h4>게시글을 등록하세요</h4>
+                <!-- 파일 업로드 폼입니다 -->
+                <div class="fileD iv">
+                    <img id="fileImg" src="#">
+                </div>
+
+                <div class="reply-content">
+                    <textarea class="form-control" row="3"></textarea>
+                    <div class="reply-group">
+                        <div class="filebox pull">
+                            <!-- <label for="file">이미지업로드</label> -->
+                            <button type="button" class="btn btn-info left">이미지 파일</button>
+                            <button type="button" class="btn btn-primary right">등록하기</button>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- 파일 업로드 폼 끝 -->
+                <div>
+                    <!-- 타이틀 영역 -->
+                    <div class="title-innner"></div>
+                    <div class="profile">
+                        <img src="img/profile.png">
+                    </div>
+                    <div class="title">
+                        <p>테스트</p>
+                        <small>21시간</small>
+                    </div>
+                    <div class="content-inner">
+                        <!--내용영역-->
+                        <p>삶이 우리를 끝없이 시험하기에 고어텍스는 한계를 테스트합니다</p>
+                    </div>
+                    <div class="image-inner">
+                        <!-- 이미지 영역 -->
+                        <img src="img/facebook.jpg" alt="facebook">
+                    </div>
+                    <div class="like-inner">
+                        <!-- 좋아요 -->
+                        <img src="img/icon.jpg" alt="like" width="20">
+                        <span>522</span>
+                    </div>
+                    <!-- 버튼 영역 -->
+                    <div class="link-inner">    
+                       <span><i class="glyphicon glyphicon-thumbs-up"></i>  좋아요 </span>
+                       <span><i class="glyphicon glyphicon-comment"></i> "댓글달기"</span>
+                       <span></span> <i class="glyphicon glyphicon-share-alt"></i>  공유하기 </span>
+                    </div>
+                    </div>
+                
+                     <div>
+                    <div class="title-innner"></div>
+                    <div class="profile">
+                        <img src="img/profile.png">
+                    </div>
+                    <div class="title">
+                        <p>테스트</p>
+                        <small>21시간</small>
+                    </div>
+                    <div class="content-inner">
+                        <!--내용영역-->
+                        <p>삶이 우리를 끝없이 시험하기에 고어텍스는 한계를 테스트합니다</p>
+                    </div>
+                    <div class="image-inner">
+                        <!-- 이미지 영역 -->
+                        <img src="img/facebook.jpg" alt>
+                    </div>
+                    <div class="like-inner">
+                        <!-- 좋아요 -->
+                        <img src="img/icon.jpg" alt>
+                        <span>522</span>
+                    </div>
+                    <div class="link-inner">    
+                       <span>
+                           <i class="glyphicon glyphicon-thumbs-up"></i>
+                           좋아요
+                       </span>
+                       <span>
+                        <i class="glyphicon glyphicon-comment"></i>
+                        "댓글달기"
+                       </span>
+                       <span>
+                        <i class="glyphicon glyphicon-share-alt"></i>
+                        공유하기
+                       </span>
+                    </div>
+                     </div>
+               
+                
+                </div>
+
+                <aside class="col-sm-2">
+                    <div class="aside-inner">
+                        <div class="menu1">
+                            <p>목록</p>
+                            <ul>
+                                <li><a href="#">목록1</a></li>
+                                <li>목록2</li>
+                                <li>목록3</li>
+                                <li>목록4</li>
+                                <li>목록5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+     </section>
+
+     <footer>
+        <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+                  <ul class="footer-menu">
+                      <li><a href="#">고객센터</a></li>
+                      <li><a href="#">이용약관</a></li>
+                      <li><a href="#">개인정보취급방침</a></li>
+                      <li><a href="#">개인정보</a></li>
+                  </ul>
+              </div>
+              <div class="col-xs-12 col-lg-10 copyright">
+                  <a href="#">
+                      <img src="img/logo.svg" width="30">
+                  </a>
+                  Bootstrap | 대표자 : 홍길동 | E-MAIL : info@info.com<br>
+                  사업자번호 : 123-56-78910 | 개인정보보호책임자 : 홍길동 | 통신판매업 : 2019-서울강남-0001<br>
+                  주소 : 서울시 강남구<br>
+                  <address>©Bootstrap. ALL RIGHTS RESERVED</address>
+              </div>
+          </div>
+      </div>
+
+      </footer>
+</body>
+</html>

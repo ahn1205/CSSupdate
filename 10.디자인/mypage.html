@@ -19,15 +19,19 @@
     <!-- 가장 아래쪽에 디자인을 추가 -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style.css">
+   
     <style>
-        .myinfo{margin:0 auto; float:none;}
-        .tabs-style{background-color: #607D8B;}
-        .tabs-style{margin-bottom: 50px;}
-        .tabs-style > li {margin-bottom: 0;}   
-        .tabs-style li a {background-color: #607D8B; border: none; margin: 0; border-radius: 0px;}
-        .tabs-style li.active a,
-        .tabs-style li.active a:hover, 
-        .tabs-style li.active a:focus { border: none;  background-color: #56707D; color : #fff; }
+        .sel{
+          width: 180px;
+        }
+
+        .sel2 {
+          width: 180px; 
+          display: inline-block;
+        }
+        
+        
+
     </style>
 </head>
 <body>
@@ -82,18 +86,76 @@
                         마이페이지
                     </div>
                     <ul class="nav nav-tabs tabs-style  " >
-                        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                        <li class="active"><a data-toggle="tab" href="#info">Home</a></li>
                         <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
                         <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
                         <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
                       </ul>
                     
                       <div class="tab-content">
-                        <div id="home" class="tab-pane fade in active">
-                          <h3>HOME</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div id="info" class="tab-pane fade in active">
+                        <p>표시는 필수 사항입니다.</p>
+                          <form class="table">
+                            <tbody class="m-control">
+                              <tr>
+                                <td>*ID</td>
+                                <td><input type="text" class="form-control sel"></td>
+                              </tr>
+
+                              <tr>
+                                <td>*비밀번호</td>
+                                <td><input type="text" class="form-control sel"></td>
+                              </tr>
+
+                              <tr>
+                                <td>*비밀번호 확인</td>
+                                <td><input type="text" class="form-control sel"></td>
+                              </tr>
+
+                                              
+                              <tr>
+                                <td>*이메일 </td>
+                                <td><input type="text" class="form-control sel2">@                               
+                                  <select class="form-control sel2" >
+                                    <option>naver.com</option>
+                                    <option>daum.net</option>
+                                    <option>hanmail.com</option>
+                                  </select>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>우편번호</td>
+                                <td><input type="text" class="form-control" readonly>
+                                  <div class="input-group-btn">
+                                      <button class="btn btn-info" type="submit" > 주소찾기 </button>
+                                    </div>
+                                
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>*주소 </td>
+                                <td><input type="text" class="form-control">
+                                
+                                </td>
+                              </tr>
+
+                              
+                              <tr>
+                                <td>*상세 주소</td>
+                                <td><input type="text" class="form-control"></td>
+                              </tr>
+                            </tbody>
+                          </form>                          
+
+                              <div class="titlefoot" align:center;>
+                                <button type="button" class="btn btn-default">수정</button>
+                                <button type="button" class="btn btn-default">목록</button>
+                              </div>
+
                         </div>
-                        <div id="menu1" class="tab-pane fade">
+                        <div id="menu1" class="tab-pane fade ">
                           <h3>Menu 1</h3>
                           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>

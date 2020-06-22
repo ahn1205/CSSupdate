@@ -587,10 +587,10 @@ footer .footer-menu li a {
         border-right: 1px solid #ddd;
         border-left: 1px solid #ddd;
     }
-.section-inner p,
-.aside-inner p {
-  margin:0;
-}
+    .section-inner p,
+    .aside-inner p {
+     margin:0;
+    }
     
     .title-inner {
         position: relative;
@@ -645,3 +645,21 @@ footer .footer-menu li a {
             display: none;
         }
     }
+
+    .myinfo{margin:0 auto; float:none;}
+        .tabs-style{background-color: #607D8B;}
+        .tabs-style{margin-bottom: 50px;}
+        .tabs-style > li {margin-bottom: 0;}   
+        .tabs-style li a {background-color: #607D8B; border: none; margin: 0; border-radius: 0px;}
+        /*가상선택자*/
+        .tabs-style li.active a,
+        .tabs-style li.active a:hover, 
+        .tabs-style li.active a:focus { border: none;  background-color: #56707D; color : #fff; }
+
+        /*마이페이지 확인 */
+        /*id, 이름 ,비밀번호 ,비밀번호 확인란을 width :200px 이메일란을 가로로 배치*/
+        .m-control .sel,
+        .m-control .sel2 {width: 180px; display: inline-block;} /*인라인 으로 배치하고 블럭성질을 갖는다.*/
+
+        /* ========================= 페이스북
+        ======================= */
