@@ -83,11 +83,13 @@
                             <!-- 버튼이 없는 인풋 -->
                             <div class="form-group">
                                 <label>비밀번호</label>
-                                <input type="password" class="form-control" placeholder="비밀번호는 영 대/소문자 숫자조합 8~16자">
+                                <input type="password" class="form-control" id = "pw" placeholder="비밀번호는 영 대/소문자 숫자조합 8~16자">
+                                <span class="msgPw"></span>
                             </div>
                             <div class="form-group">
                                 <label>비밀번호확인</label>
-                                <input type="password" class="form-control" placeholder="비밀번호는 영 대/소문자 숫자조합 8~16자">
+                                <input type="password" class="form-control" id="pwConfirm" placeholder="비밀번호는 영 대/소문자 숫자조합 8~16자">
+                                <span class="msgPwConfirm"></span>
                             </div>
                             <div class="form-group">
                                 <label>이름</label>
@@ -161,11 +163,11 @@
     <script>
         var msgId = document.querySelector(".msgId");
         var id = document.getElementById("id");
-        id.inkeyup = function(){
+        id.onkeyup = function(){
             //정규 표현식
             var regex = /^[A-Za-z0-9+]{4,12}$/;
             console.log(id);
-            if(!regex.test(id.value)){//사용가능한 경우
+            if(regex.test(id.value)){//사용가능한 경우
                 id.style.borderColor = "green";
                 msgId.innerHTML = "사용가능합니다.";
             }else{//사용불가능한 경우 
@@ -173,9 +175,36 @@
                 msgId.innerHTML="";
             }
         }
-        //비밀번호 형식검사
+               //비밀번호 형식검사
+               var msgPw = document.querySelector(".msgPw");
+               var pw = document.getElementById("pw");
+               pw.onkeyup = function() {
+                   var regex = /^.*(?=.{6,10})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
+       
+                   if(regex.test(pw.value)) { //형식검사에 일치하는 경우
+                       pw.style.borderColor = "green";
+                       msgPw.innerHTML = "사용가능합니다";
+                   } else { //형식에 일치하지 않는 경우
+                       pw.style.borderColor = "red";
+                       msgPw.innerHTML = "";
+                   }
+               }
+               //비밀번호 확인검사(pw와 동일한 값)
+               var msgPwCofirm = document.querySelector(".msgPwCofirm");
+               var pwConfirm = document.getElementById("pwConfirm");
+               pwConfirm.onclick = function() {
+                   //비밀번호 확인란과 비교
+                   if(pw.value === pwConfirm.value) {
+                       pwConfirm.style.borderColor = "green";
+                       msgPwCofirm.innerHTML = "비밀번호가 일치합니다";
+                   } else {
+                       pwConfirm.style.borderColor = "red";
+                       msgPwCofirm.innerHTML = "비밀번호 확인란을 확인하세요";
+                   }
+               }
+       
 
-        //비밀번호 확인 검사    
+
     </script>
 </body>
 </html>
